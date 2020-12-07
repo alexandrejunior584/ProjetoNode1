@@ -1,0 +1,39 @@
+<%- include('templates/header.ejs'); %>
+
+      <div class="container mt-5">
+        <form action="/admin/produto-enviado" method="POST">
+            <div class="form-group">
+            <label for="produto">Produto</label>
+            <input type="text" class="form-control" name="titulo" id="produto" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-danger">Cadastrar</button>
+        </form>
+      </div>
+
+<%- include('templates/footer.ejs'); %>
+
+<style>
+	form{
+		margin: auto;
+		width: 50%;
+		padding: 20px;
+		background: #1e90ff;
+		border-radius: 7px;
+	}
+
+
+	label{
+		font-size: 30px;
+		color: white;
+		font-family: 'Nerko One', cursive;
+	}
+
+	button{
+		font-family: 'Nerko One', cursive;
+	}
+
+    input{
+    	font-family: 'Nerko One', cursive;
+    }
+
+</style>

@@ -1,0 +1,22 @@
+<%- include('templates/header.ejs'); %>
+
+    <div class="container ">
+        <h1 class="mt-5 text-center">Todos os produtos</h1>
+    <div class="card-deck mt-5">
+      <% if(produtoDados.length > 0) { %>
+      	<% produtoDados.forEach(produto => { %>
+	  <div class="card">
+	  	<h5 class="card-title text-center mt-3"> <%= produto %> </h5>
+	    <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_739888-MLA40540552134_012020-W.webp" alt="Imagem de capa do card">
+	    <div class="card-body">
+	      <h5 class="card-title text-center">Preço: R$2000</h5>
+	      <p class="card-text text-center"><small class="text-muted"><%= produto %> com um preço especial</small></p>
+	    </div>
+	  </div>
+	  <% }) %>
+	 <% } %>
+	 </div>
+    </div>  
+<%- include('templates/footer.ejs'); %>
+
+
